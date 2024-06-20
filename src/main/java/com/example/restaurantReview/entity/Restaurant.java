@@ -5,6 +5,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,7 +16,7 @@ import lombok.Setter;
 public class Restaurant {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "NAME")
@@ -30,8 +31,8 @@ public class Restaurant {
     @Column(name = "CUISINE")
     private String cuisine;
 
-    @Column(name = "RATING")
-    private String rating;
+    @Column(name = "AVERAGE_RATING")
+    private String averageRating;
 
     @Column(name = "COMMENT")
     private String comment;
