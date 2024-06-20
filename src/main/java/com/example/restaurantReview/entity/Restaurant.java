@@ -5,7 +5,11 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "RESTAURANT")
 public class Restaurant {
