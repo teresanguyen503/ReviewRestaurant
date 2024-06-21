@@ -3,6 +3,6 @@ package com.example.restaurantReview.repository;
 import org.springframework.data.repository.CrudRepository;
 import com.example.restaurantReview.entity.Restaurant;
 
-public interface RestaurantRepository extends CrudRepository<Restaurant, Integer> {
+public interface RestaurantRepository extends CrudRepository<Restaurant, Long> {
 
 }
