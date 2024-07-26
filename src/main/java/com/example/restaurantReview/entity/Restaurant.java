@@ -35,7 +35,7 @@ public class Restaurant {
     private String cuisine;
 
     @Column(name = "AVERAGE_RATING")
-    private Number averageRating;
+    private Long averageRating;
 
     @Column(name = "COMMENT")
     private String comment;
