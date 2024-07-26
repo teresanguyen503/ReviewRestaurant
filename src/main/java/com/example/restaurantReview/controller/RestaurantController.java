@@ -50,6 +50,9 @@ public class RestaurantController {
         if (r.getStreetAddress() != null) {
             restaurantToUpdate.setStreetAddress(r.getStreetAddress());
         }
+        if (r.getCity() != null) {
+            restaurantToUpdate.setCity(r.getCity());
+        }
         if (r.getZipCode() != null) {
             restaurantToUpdate.setZipCode(r.getZipCode());
         }
