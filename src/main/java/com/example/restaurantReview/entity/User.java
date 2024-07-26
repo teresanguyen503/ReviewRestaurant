@@ -36,4 +36,10 @@ public class User {
 
     @Column(name = "PASSWORD", nullable = false)
     private String password;
+
+    @Column(name = "SECURITY_QUESTION", nullable = false)
+    private String securityQuestion;
+
+    @Column(name = "SECURITY_ANSWER", nullable = false)
+    private String securityAnswer;
 }
