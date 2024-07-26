@@ -43,21 +43,27 @@ public class UserController {
             return null;
         }
 
-        User userToUdate = userToUpdateOptional.get();
+        User userToUpdate = userToUpdateOptional.get();
         if (u.getFirstName() != null) {
-            userToUdate.setFirstName(u.getFirstName());
+            userToUpdate.setFirstName(u.getFirstName());
         }
         if (u.getLastName() != null) {
-            userToUdate.setLastName(u.getLastName());
+            userToUpdate.setLastName(u.getLastName());
         }
         if (u.getEmail() != null) {
-            userToUdate.setEmail(u.getEmail());
+            userToUpdate.setEmail(u.getEmail());
         }
         if (u.getPassword() != null) {
-            userToUdate.setPassword(u.getPassword());
+            userToUpdate.setPassword(u.getPassword());
+        }
+        if (u.getSecurityQuestion() != null) {
+            userToUpdate.setSecurityQuestion(u.getSecurityQuestion());
+        }
+        if (u.getSecurityAnswer() != null) {
+            userToUpdate.setSecurityAnswer(u.getSecurityAnswer());
         }
 
-        User updatedUser = this.userRepository.save(userToUdate);
+        User updatedUser = this.userRepository.save(userToUpdate);
         return updatedUser;
     }
 
