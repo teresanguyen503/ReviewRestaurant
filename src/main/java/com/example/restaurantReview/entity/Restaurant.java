@@ -25,6 +25,9 @@ public class Restaurant {
     @Column(name = "STREET_ADDRESS")
     private String streetAddress;
 
+    @Column(name = "CITY")
+    private String city;
+
     @Column(name = "ZIP_CODE")
     private String zipCode;
 
@@ -32,7 +35,7 @@ public class Restaurant {
     private String cuisine;
 
     @Column(name = "AVERAGE_RATING")
-    private String averageRating;
+    private Number averageRating;
 
     @Column(name = "COMMENT")
     private String comment;
