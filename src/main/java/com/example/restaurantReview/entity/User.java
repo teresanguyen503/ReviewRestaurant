@@ -6,24 +6,24 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.JoinColumn;
+// import jakarta.persistence.ManyToOne;
+// import jakarta.persistence.JoinColumn;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "USER")
+@Table(name = "`USER`")
 
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "restaurant_id", nullable = false)
-    private Restaurant restaurant;
+    // @ManyToOne
+    // @JoinColumn(name = "restaurant_id", nullable = false)
+    // private Restaurant restaurant;
 
     @Column(name = "FIRST_NAME", nullable = false)
     private String firstName;
@@ -36,6 +36,9 @@ public class User {
 
     @Column(name = "PASSWORD", nullable = false)
     private String password;
+
+    @Column(name = "CONFIRM_PASSWORD", nullable = false)
+    private String confirmPassword;
 
     @Column(name = "SECURITY_QUESTION", nullable = false)
     private String securityQuestion;
